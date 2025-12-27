@@ -1,0 +1,24 @@
+# D3: REASONING - Decision Authority
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+decision_authority:
+  governance_level: minimal
+  governance_capability: capability-governance-minimal
+
+  autonomous_decisions:
+    - Research direction
+    - Methodology selection
+    - Literature exploration
+    - Hypothesis formation
+    - Internal state updates
+
+  requires_approval:
+    - Publication of findings
+    - Resource-intensive research
+    - External data access
+
+  escalate:
+    - Sensitive findings
+    - Conflicting evidence
+    - Ethical concerns

@@ -1,0 +1,33 @@
+# D5: CONTEXT - Agent Relationships
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+relationships:
+  managed_by:
+    - role: supervisor
+      template: template-supervisor-aget
+      interaction: research_oversight
+
+  peers:
+    - role: analyst
+      template: template-analyst-aget
+      interaction: data_sharing
+
+    - role: consultant
+      template: template-consultant-aget
+      interaction: domain_expertise
+
+    - role: spec-engineer
+      template: template-spec-engineer-aget
+      interaction: requirements_research
+
+  manages: []
+
+  communication:
+    upstream:
+      - Research findings
+      - Knowledge summaries
+    downstream: []
+    lateral:
+      - Knowledge exchange
+      - Source sharing

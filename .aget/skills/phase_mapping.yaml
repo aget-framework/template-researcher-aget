@@ -1,0 +1,24 @@
+# D4: SKILLS - A-SDLC Phase Mapping
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+asdlc_phases:
+  primary:
+    - phase: 0
+      name: Discovery
+      activities:
+        - Literature review
+        - Problem exploration
+        - Knowledge gathering
+        - Gap identification
+      intensity: high
+
+  secondary:
+    - phase: 1
+      name: Specification
+      activities:
+        - Requirements research
+        - Feasibility studies
+      intensity: medium
+
+  cross_cutting: []

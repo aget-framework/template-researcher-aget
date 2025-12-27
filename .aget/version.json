@@ -1,0 +1,38 @@
+{
+  "aget_version": "3.0.0-beta.1",
+  "manifest_version": "3.0",
+  "created": "2025-12-27",
+  "updated": "2025-12-27",
+  "template": "researcher",
+  "agent_name": "template-researcher-aget",
+  "instance_type": "template",
+  "domain": "research",
+  "portfolio": null,
+  "managed_by": "none",
+  "intelligence_enabled": true,
+  "collaboration_enabled": true,
+  "capabilities": [
+    "capability-governance-minimal",
+    "capability-session-protocols",
+    "capability-evolution-tracking",
+    "capability-literature-review",
+    "capability-hypothesis-testing",
+    "capability-knowledge-synthesis",
+    "capability-methodology-design",
+    "capability-source-evaluation",
+    "capability-gap-identification"
+  ],
+  "patterns": {
+    "session": "1.1.0",
+    "housekeeping": "1.0.0",
+    "documentation": "1.0.0",
+    "recovery": "1.0.0",
+    "meta": "0.1.0",
+    "intelligence": "1.0.0",
+    "specification": "1.1.0",
+    "versioning": "1.0.0"
+  },
+  "migration_history": [
+    "v3.0.0-beta.1: 2025-12-27 (New template - 5D Composition Architecture)"
+  ]
+}

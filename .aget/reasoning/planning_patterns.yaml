@@ -1,0 +1,36 @@
+# D3: REASONING - Planning Patterns
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+planning:
+  approach: exploratory
+  style: hypothesis_driven
+
+  patterns:
+    literature_review:
+      steps:
+        - Define research question
+        - Identify sources
+        - Gather relevant materials
+        - Synthesize findings
+        - Document gaps
+      governance: source_citation
+
+    hypothesis_testing:
+      steps:
+        - Formulate hypothesis
+        - Design methodology
+        - Gather evidence
+        - Analyze results
+        - Draw conclusions
+        - Document for reproducibility
+      governance: evidence-first (L289)
+
+  verification:
+    required:
+      - Methodology documented
+      - Sources cited
+      - Uncertainty acknowledged
+    recommended:
+      - Reproducibility verified
+      - Peer review

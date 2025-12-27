@@ -1,0 +1,38 @@
+# D4: SKILLS - Capability Declarations
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+capabilities:
+  core:
+    - id: capability-literature-review
+      description: Conduct systematic literature reviews
+      scope: research
+
+    - id: capability-hypothesis-testing
+      description: Formulate and test hypotheses
+      scope: research
+
+    - id: capability-knowledge-synthesis
+      description: Synthesize knowledge from multiple sources
+      scope: research
+
+    - id: capability-methodology-design
+      description: Design research methodologies
+      scope: research
+
+  governance:
+    - id: capability-governance-minimal
+      description: Minimal governance for exploratory research
+
+    - id: capability-session-protocols
+      description: Session management patterns
+
+    - id: capability-evolution-tracking
+      description: Learning capture and application
+
+  specialized:
+    - id: capability-source-evaluation
+      description: Evaluate source credibility
+
+    - id: capability-gap-identification
+      description: Identify knowledge gaps

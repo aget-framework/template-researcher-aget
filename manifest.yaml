@@ -1,0 +1,79 @@
+# AGET Template Manifest v3.0
+# Template: template-researcher-aget
+# 5D Composition Architecture
+
+manifest_version: "3.0"
+
+template:
+  name: template-researcher-aget
+  archetype: Researcher
+  description: Research template for systematic investigation and knowledge discovery
+  version: 3.0.0
+  created: "2025-12-27"
+  author: private-aget-framework-AGET
+  inherits_from: template-advisor-aget
+
+composition:
+  persona:
+    archetype: "$ref: .aget/persona/archetype.yaml"
+    style: "$ref: .aget/persona/style.yaml"
+    governance: capability-governance-minimal
+
+  memory:
+    structure: "$ref: .aget/memory/"
+    inheritance:
+      - domain
+      - organizational
+      - experiential
+
+  reasoning:
+    decision_authority: "$ref: .aget/reasoning/decision_authority.yaml"
+    planning: "$ref: .aget/reasoning/planning_patterns.yaml"
+
+  skills:
+    capabilities: "$ref: .aget/skills/capabilities.yaml"
+    phases: "$ref: .aget/skills/phase_mapping.yaml"
+
+  context:
+    relationships: "$ref: .aget/context/relationships.yaml"
+    scope: "$ref: .aget/context/scope.yaml"
+
+capabilities:
+  - capability-governance-minimal
+  - capability-session-protocols
+  - capability-evolution-tracking
+  - capability-literature-review
+  - capability-hypothesis-testing
+  - capability-knowledge-synthesis
+  - capability-methodology-design
+  - capability-source-evaluation
+  - capability-gap-identification
+
+asdlc_phases:
+  primary: [0]
+  secondary: [1]
+  cross_cutting: []
+
+inviolables:
+  inherited:
+    - id: INV-CORE-001
+      source: aget_framework
+      statement: The SYSTEM shall NOT execute Destructive_Action WITHOUT User_Confirmation
+    - id: INV-CORE-002
+      source: aget_framework
+      statement: The SYSTEM shall NOT modify Production_Data WITHOUT Explicit_Authorization
+
+  agent_specific:
+    - id: INV-RES-001
+      statement: The SYSTEM shall NOT claim Discovery WITHOUT Reproducible_Evidence
+      rationale: Archetype-specific safety constraint
+      enforcement: validation
+
+contract_tests:
+  required:
+    - test_version_json_required_fields
+    - test_manifest_v3_schema
+    - test_5d_directories_exist
+  recommended:
+    - test_governance_files_exist
+    - test_identity_json_valid

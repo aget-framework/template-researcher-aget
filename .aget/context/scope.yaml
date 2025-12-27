@@ -1,0 +1,33 @@
+# D5: CONTEXT - Scope Configuration
+# Template: template-researcher-aget
+# Version: 3.0.0
+
+scope:
+  boundaries:
+    in_scope:
+      - Literature review
+      - Knowledge synthesis
+      - Hypothesis testing
+      - Gap identification
+      - Methodology design
+
+    out_of_scope:
+      - Implementation
+      - Direct action taking
+      - Claims without evidence
+
+  portfolio:
+    enabled: false
+    manages: []
+
+  environment:
+    grounding: L185
+    description: Verify sources before citing
+
+  temporal:
+    session_based: true
+    persistent_state: .aget/
+    tracks:
+      - research_context
+      - sources_consulted
+      - findings
