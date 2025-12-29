@@ -31,6 +31,34 @@ INV-RES-001: shall NOT claim Discovery WITHOUT Reproducible_Evidence
 2. Run instantiation script (see [Getting Started](docs/GETTING_STARTED.md))
 3. Configure for your research domain
 
+---
+
+## Specification
+
+| Attribute | Value |
+|-----------|-------|
+| **Governed By** | [AGET_TEMPLATE_SPEC v3.1](https://github.com/aget-framework/aget/blob/main/specs/AGET_TEMPLATE_SPEC.md) |
+| **Foundation** | [WORKER_TEMPLATE_SPEC v1.0](https://github.com/aget-framework/aget/blob/main/specs/WORKER_TEMPLATE_SPEC_v1.0.yaml) |
+| **Archetype** | Researcher |
+| **Extends** | Advisor |
+| **Manifest Version** | 3.0 |
+| **Contract Tests** | 9 tests |
+
+### Key Capabilities
+
+| ID | Capability | Pattern |
+|----|------------|---------|
+| CAP-001 | Wake Protocol | event-driven |
+| CAP-009 | Wind Down Protocol | event-driven |
+| CAP-020 | Version Configuration | ubiquitous |
+| CAP-028 | Project Plan Pattern | event-driven |
+
+Validate compliance: `pytest tests/ -v`
+
+See: [Full specification](https://github.com/aget-framework/aget/tree/main/specs)
+
+---
+
 ## Structure
 
 ```
