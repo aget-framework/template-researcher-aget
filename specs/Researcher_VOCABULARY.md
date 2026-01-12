@@ -1,11 +1,13 @@
 # Researcher Domain Vocabulary
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 **Status**: Active
 **Owner**: template-researcher-aget
 **Created**: 2026-01-10
+**Updated**: 2026-01-11
 **Scope**: Template vocabulary (DRIVES instance behavior per L481)
 **Archetype**: Researcher
+**Template**: VOCABULARY_TEMPLATE_v3.3
 
 ---
 
@@ -90,6 +92,37 @@ Discovery:
   skos:broader: Researcher_Core_Concepts
   skos:inScheme: Researcher_Vocabulary
 ```
+
+---
+
+## Concept Relationships
+
+```yaml
+relationships:
+  hierarchical:
+    - parent: Researcher_Core_Concepts
+      children: [Research_Question, Knowledge_Gap, Evidence, Synthesis, Discovery]
+
+  associative:
+    - subject: Research_Question
+      predicate: skos:related
+      object: Knowledge_Gap
+    - subject: Evidence
+      predicate: skos:related
+      object: Synthesis
+```
+
+---
+
+## EKO Cross-References
+
+Per AGET_EXECUTABLE_KNOWLEDGE_SPEC.md:
+
+| Vocabulary Term | EKO Term | Relationship |
+|-----------------|----------|--------------|
+| Research_Question | EKO:Investigation_Focus | skos:exactMatch |
+| Evidence | EKO:Knowledge_Evidence | skos:closeMatch |
+| Discovery | EKO:Knowledge_Asset | skos:broadMatch |
 
 ---
 
