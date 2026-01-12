@@ -8,7 +8,7 @@ template:
   name: template-researcher-aget
   archetype: Researcher
   description: Research template for systematic investigation and knowledge discovery
-  version: 3.0.0
+  version: 3.3.0
   created: "2025-12-27"
   author: private-aget-framework-AGET
   inherits_from: template-advisor-aget
