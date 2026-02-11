@@ -1,3 +1,9 @@
 
 # Claude Code user settings and skills (deployed separately)
-.claude/
+
+# Claude Code user settings (not versioned)
+.claude/settings.json
+.claude/statsig/
+.claude/todos/
+.claude/chat/
+# .claude/skills/ IS versioned
