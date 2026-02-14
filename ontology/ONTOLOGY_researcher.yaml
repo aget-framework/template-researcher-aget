@@ -1,0 +1,273 @@
+# ONTOLOGY: Researcher Archetype v1.0
+# SKOS-aligned concept definitions for research and knowledge discovery
+#
+# Archetype: researcher
+# Created: 2026-02-14
+# Author: private-aget-framework-AGET
+# Format: SKOS-inspired YAML (aget-framework convention)
+# Concepts: 7
+# Project: ARC-001 (Archetype Customization v3.5)
+
+apiVersion: aget.framework/v1
+kind: OntologySpec
+metadata:
+  name: researcher-archetype-ontology
+  version: 1.0.0
+  created: 2026-02-14
+  author: private-aget-framework-AGET
+  archetype: researcher
+  description: >
+    Formal vocabulary for researcher archetype agents. Defines concepts for
+    hypothesis formulation, literature review, and finding documentation.
+  extends: ONTOLOGY_personal_ai_systems_v1.0.yaml
+
+# ============================================================================
+# CONCEPT SCHEME
+# ============================================================================
+
+conceptScheme:
+  uri: aget:ontology/researcher
+  prefLabel: Researcher Archetype Ontology
+  definition: >
+    A vocabulary for describing researcher agent capabilities including
+    hypothesis formation, literature search, and knowledge synthesis.
+  hasTopConcept:
+    - aget:archetype/researcher/Hypothesis
+    - aget:archetype/researcher/Finding
+    - aget:archetype/researcher/Literature
+  relatedScheme:
+    - aget:ontology/personal-ai-systems
+
+# ============================================================================
+# CONCEPTS
+# ============================================================================
+
+concepts:
+
+  # --------------------------------------------------------------------------
+  # Concept: Hypothesis
+  # --------------------------------------------------------------------------
+  - id: RES-001
+    uri: aget:archetype/researcher/Hypothesis
+    prefLabel: Hypothesis
+    altLabel:
+      - Research_Question
+      - Conjecture
+      - Proposition
+    definition: >
+      A testable statement or prediction that guides research inquiry.
+      Hypotheses are validated or invalidated through evidence.
+    scopeNote: >
+      AGET: H-prefix identifiers in PROJECT_PLANs (e.g., H-ACP-001).
+      Good hypotheses are specific, measurable, and falsifiable.
+    theoreticalBasis:
+      primary: Scientific Method
+      source: Philosophy of Science
+      reference: https://en.wikipedia.org/wiki/Hypothesis
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Evidence
+      - aget:archetype/researcher/Finding
+    example:
+      - "H-ACP-001: Archetype ontologies enable skill differentiation"
+    inScheme: aget:ontology/researcher
+    cluster: Research Process
+
+  # --------------------------------------------------------------------------
+  # Concept: Literature
+  # --------------------------------------------------------------------------
+  - id: RES-002
+    uri: aget:archetype/researcher/Literature
+    prefLabel: Literature
+    altLabel:
+      - Prior_Work
+      - Sources
+      - References
+    definition: >
+      Published knowledge relevant to the research topic, including
+      papers, books, documentation, and other authoritative sources.
+    scopeNote: >
+      Literature review establishes context and identifies gaps.
+      Citations provide provenance and enable verification.
+    theoreticalBasis:
+      primary: Literature Review
+      source: Research Methodology
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Citation
+      - aget:archetype/researcher/Finding
+    inScheme: aget:ontology/researcher
+    cluster: Knowledge Sources
+
+  # --------------------------------------------------------------------------
+  # Concept: Citation
+  # --------------------------------------------------------------------------
+  - id: RES-003
+    uri: aget:archetype/researcher/Citation
+    prefLabel: Citation
+    altLabel:
+      - Reference
+      - Source_Reference
+    definition: >
+      A formal reference to a source of information used in research.
+      Citations enable traceability and academic integrity.
+    scopeNote: >
+      AGET: L-doc references, web research sources, theoretical basis
+      citations in ontologies.
+    theoreticalBasis:
+      primary: Citation Practice
+      source: Academic Standards
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Literature
+    inScheme: aget:ontology/researcher
+    cluster: Knowledge Sources
+
+  # --------------------------------------------------------------------------
+  # Concept: Finding
+  # --------------------------------------------------------------------------
+  - id: RES-004
+    uri: aget:archetype/researcher/Finding
+    prefLabel: Finding
+    altLabel:
+      - Discovery
+      - Result
+      - Observation
+    definition: >
+      A conclusion or insight derived from research activity. Findings
+      may support, refute, or refine hypotheses.
+    scopeNote: >
+      AGET: Findings captured in L-docs, session notes, and research
+      PROJECT_PLANs. Findings inform framework evolution.
+    theoreticalBasis:
+      primary: Research Results
+      source: Scientific Method
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Hypothesis
+      - aget:archetype/researcher/Evidence
+    inScheme: aget:ontology/researcher
+    cluster: Research Process
+
+  # --------------------------------------------------------------------------
+  # Concept: Evidence
+  # --------------------------------------------------------------------------
+  - id: RES-005
+    uri: aget:archetype/researcher/Evidence
+    prefLabel: Evidence
+    altLabel:
+      - Data
+      - Support
+      - Proof
+    definition: >
+      Information that supports or contradicts a hypothesis or claim.
+      Evidence quality affects conclusion validity.
+    scopeNote: >
+      Evidence types: empirical, experimental, observational, documentary.
+      Per L289, evidence-first design requires evidence before architecture.
+    theoreticalBasis:
+      primary: Evidence-Based Practice
+      source: Scientific Method
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Hypothesis
+      - aget:archetype/researcher/Finding
+    inScheme: aget:ontology/researcher
+    cluster: Research Process
+
+  # --------------------------------------------------------------------------
+  # Concept: Methodology
+  # --------------------------------------------------------------------------
+  - id: RES-006
+    uri: aget:archetype/researcher/Methodology
+    prefLabel: Methodology
+    altLabel:
+      - Method
+      - Approach
+      - Research_Design
+    definition: >
+      The systematic approach used to conduct research, including
+      data collection, analysis, and validation techniques.
+    scopeNote: >
+      Methodology selection depends on research question type.
+      Reproducibility requires clear methodology documentation.
+    theoreticalBasis:
+      primary: Research Methodology
+      source: Academic Research
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Hypothesis
+      - aget:archetype/researcher/Evidence
+    enumValues:
+      - Quantitative    # Numerical data analysis
+      - Qualitative     # Non-numerical interpretation
+      - Mixed_Methods   # Both approaches
+      - Exploratory     # Initial investigation
+    inScheme: aget:ontology/researcher
+    cluster: Research Process
+
+  # --------------------------------------------------------------------------
+  # Concept: Knowledge_Gap
+  # --------------------------------------------------------------------------
+  - id: RES-007
+    uri: aget:archetype/researcher/Knowledge_Gap
+    prefLabel: Knowledge_Gap
+    altLabel:
+      - Research_Gap
+      - Unknown
+      - Open_Question
+    definition: >
+      An area where knowledge is incomplete or missing, representing
+      an opportunity for research contribution.
+    scopeNote: >
+      Gap identification drives research priorities. Gaps discovered
+      through literature review and practice observation.
+    theoreticalBasis:
+      primary: Gap Analysis
+      source: Research Planning
+    broader: null
+    narrower: null
+    related:
+      - aget:archetype/researcher/Literature
+      - aget:archetype/researcher/Hypothesis
+    inScheme: aget:ontology/researcher
+    cluster: Knowledge Sources
+
+# ============================================================================
+# RELATIONSHIPS
+# ============================================================================
+
+relationships:
+  - subject: aget:archetype/researcher/Finding
+    predicate: skos:related
+    object: aget:archetype/researcher/Hypothesis
+    note: Findings validate hypotheses
+
+  - subject: aget:archetype/researcher/Evidence
+    predicate: skos:related
+    object: aget:archetype/researcher/Finding
+    note: Evidence supports findings
+
+# ============================================================================
+# METADATA
+# ============================================================================
+
+provenance:
+  project: ARC-001
+  created: 2026-02-14
+  author: private-aget-framework-AGET
+  methodology: Derived from researcher archetype RESEARCHER_SPEC.md
+
+validation:
+  conceptCount: 7
+  clusters: 2
+  theoreticalGrounding: 100%
+  skosCompliance: partial
+
+# End of ONTOLOGY_researcher.yaml
