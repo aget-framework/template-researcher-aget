@@ -1,83 +1,128 @@
-# AGET Researcher Template
+# Template: Researcher Agent
 
-> **Research and knowledge discovery template**
+> Synthesize knowledge through literature search and documented findings
 
-Part of the [AGET Framework](https://github.com/aget-framework) v3.5.0.
+**Version**: v3.5.0 | **Archetype**: Researcher | **Skills**: 2 specialized + 13 universal
 
-## Archetype
+---
 
-**Researcher** - Expand knowledge through systematic investigation and discovery.
+## Why Researcher?
 
-- **Extends**: advisor
-- **Governance**: Minimal
-- **Primary A-SDLC Phases**: 0 (Discovery)
+The Researcher archetype expands **knowledge through systematic inquiry**. Unlike casual information gathering, researcher agents provide:
 
-## Key Capabilities
+- **Literature search** — Search across sources with structured queries and citation tracking
+- **Documented findings** — Record discoveries with evidence, methodology, and implications
+- **Knowledge synthesis** — Connect disparate information into coherent understanding
 
-- Literature review and synthesis
-- Hypothesis testing and validation
-- Knowledge synthesis and documentation
-- Exploratory investigation
+**For evaluators**: If you need an AI that can conduct methodical research and document findings for future reference, the Researcher archetype brings scholarly rigor to your knowledge work.
 
-## Inviolable
+---
 
-```
-INV-RES-001: shall NOT claim Discovery WITHOUT Reproducible_Evidence
-```
+## Skills
+
+Researcher agents come with **2 archetype-specific skills** plus 13 universal AGET skills.
+
+### Archetype Skills
+
+| Skill | Description |
+|-------|-------------|
+| **aget-search-literature** | Search literature with structured queries. Tracks sources, extracts key findings, and maintains citation metadata. |
+| **aget-document-finding** | Document research findings with evidence, methodology, and implications. Creates persistent, searchable records. |
+
+### Universal Skills
+
+All AGET agents include session management, knowledge capture, and health monitoring:
+
+- `aget-wake-up` / `aget-wind-down` — Session lifecycle
+- `aget-create-project` / `aget-review-project` — Project management
+- `aget-record-lesson` / `aget-capture-observation` — Learning capture
+- `aget-check-health` / `aget-check-kb` / `aget-check-evolution` — Health monitoring
+- `aget-propose-skill` / `aget-create-skill` — Skill development
+- `aget-save-state` / `aget-file-issue` — State and issue management
+
+---
+
+## Ontology
+
+Researcher agents use a **formal vocabulary** of 6 concepts organized into 2 clusters:
+
+| Cluster | Concepts |
+|---------|----------|
+| **Research Process** | Query, Source, Finding |
+| **Knowledge Artifacts** | Citation, Synthesis, Hypothesis |
+
+This vocabulary enables precise communication about research activities.
+
+See: [`ontology/ONTOLOGY_researcher.yaml`](ontology/ONTOLOGY_researcher.yaml)
+
+---
 
 ## Quick Start
 
-1. Clone this template
-2. Run instantiation script (see [Getting Started](docs/GETTING_STARTED.md))
-3. Configure for your research domain
+```bash
+# 1. Clone the template
+git clone https://github.com/aget-framework/template-researcher-aget.git my-researcher-agent
+cd my-researcher-agent
+
+# 2. Configure identity
+# Edit .aget/version.json:
+#   "agent_name": "my-researcher-agent"
+#   "domain": "your-domain"
+
+# 3. Verify setup
+python3 -m pytest tests/ -v
+# Expected: All tests passing
+```
+
+### Try the Skills
+
+```bash
+# In Claude Code CLI
+/aget-search-literature   # Search for information
+/aget-document-finding    # Record a research finding
+```
 
 ---
 
-## Specification
+## What Makes Researcher Different
+
+| Aspect | Casual Search | Researcher Agent |
+|--------|---------------|------------------|
+| **Search** | Ad-hoc queries | Structured literature review |
+| **Sources** | Links forgotten | Citation tracking |
+| **Findings** | Mental notes | Documented records |
+| **Synthesis** | Implicit | Explicit knowledge connection |
+
+---
+
+## Framework Specification
 
 | Attribute | Value |
 |-----------|-------|
-| **Governed By** | [AGET_TEMPLATE_SPEC v3.1](https://github.com/aget-framework/aget/blob/main/specs/AGET_TEMPLATE_SPEC.md) |
-| **Foundation** | [WORKER_TEMPLATE_SPEC v1.0](https://github.com/aget-framework/aget/blob/main/specs/WORKER_TEMPLATE_SPEC_v1.0.yaml) |
+| **Framework** | [AGET v3.5.0](https://github.com/aget-framework/aget) |
 | **Archetype** | Researcher |
-| **Extends** | Advisor |
-| **Manifest Version** | 3.0 |
-| **Contract Tests** | 9 tests |
-
-### Key Capabilities
-
-| ID | Capability | Pattern |
-|----|------------|---------|
-| CAP-001 | Wake Protocol | event-driven |
-| CAP-009 | Wind Down Protocol | event-driven |
-| CAP-020 | Version Configuration | ubiquitous |
-| CAP-028 | Project Plan Pattern | event-driven |
-
-Validate compliance: `pytest tests/ -v`
-
-See: [Full specification](https://github.com/aget-framework/aget/tree/main/specs)
+| **Skills** | 15 total (2 archetype + 13 universal) |
+| **Ontology** | 6 concepts, 2 clusters |
+| **License** | Apache 2.0 |
 
 ---
 
-## Structure
+## Learn More
 
-```
-template-researcher-aget/
-├── manifest.yaml          # Template configuration
-├── governance/            # Charter, Mission, Scope
-├── tests/                 # Contract tests
-└── .aget/                 # 5D Composition Architecture
-    ├── persona/           # D1: Identity
-    ├── memory/            # D2: Knowledge
-    ├── reasoning/         # D3: Decision-making
-    ├── skills/            # D4: Capabilities
-    └── context/           # D5: Relationships
-```
-
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE)
+- **[AGET Framework](https://github.com/aget-framework/aget)** — Core framework documentation
+- **[Archetype Guide](https://github.com/aget-framework/aget/blob/main/docs/ARCHETYPE_GUIDE.md)** — All 12 archetypes explained
+- **[Getting Started](https://github.com/aget-framework/aget/blob/main/docs/GETTING_STARTED.md)** — Full onboarding guide
 
 ---
 
-*AGET Framework - AI discovers patterns, you describe intent*
+## Related Archetypes
+
+| Archetype | Best For |
+|-----------|----------|
+| **[Analyst](https://github.com/aget-framework/template-analyst-aget)** | Data analysis and metrics |
+| **[Advisor](https://github.com/aget-framework/template-advisor-aget)** | Recommendations based on research |
+| **[Spec-Engineer](https://github.com/aget-framework/template-spec-engineer-aget)** | Formalizing research into specs |
+
+---
+
+**AGET Framework** | Apache 2.0 | [Issues](https://github.com/aget-framework/template-researcher-aget/issues)
