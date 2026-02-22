@@ -2,7 +2,7 @@
 
 > Synthesize knowledge through literature search and documented findings
 
-**Version**: v3.5.0 | **Archetype**: Researcher | **Skills**: 2 specialized + 13 universal
+**Version**: v3.6.0 | **Archetype**: Researcher | **Skills**: 2 specialized + 14 universal
 
 ---
 
@@ -20,7 +20,7 @@ The Researcher archetype expands **knowledge through systematic inquiry**. Unlik
 
 ## Skills
 
-Researcher agents come with **2 archetype-specific skills** plus 13 universal AGET skills.
+Researcher agents come with **2 archetype-specific skills** plus the universal AGET skills.
 
 ### Archetype Skills
 
@@ -99,9 +99,9 @@ python3 -m pytest tests/ -v
 
 | Attribute | Value |
 |-----------|-------|
-| **Framework** | [AGET v3.5.0](https://github.com/aget-framework/aget) |
+| **Framework** | [AGET v3.6.0](https://github.com/aget-framework/aget) |
 | **Archetype** | Researcher |
-| **Skills** | 15 total (2 archetype + 13 universal) |
+| **Skills** | 16 total (2 archetype + 14 universal) |
 | **Ontology** | 6 concepts, 2 clusters |
 | **License** | Apache 2.0 |
 
