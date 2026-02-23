@@ -16,6 +16,8 @@ The Researcher archetype expands **knowledge through systematic inquiry**. Unlik
 
 **For evaluators**: If you need an AI that can conduct methodical research and document findings for future reference, the Researcher archetype brings scholarly rigor to your knowledge work.
 
+**Domain knowledge that compounds**: Researcher agents build persistent understanding of your research domain — prior findings, key sources, methodological preferences, and knowledge gaps. Unlike tools that start fresh each session, your agent accumulates research context that makes each literature search more targeted and each synthesis more connected.
+
 ---
 
 ## Skills
@@ -92,6 +94,7 @@ python3 -m pytest tests/ -v
 | **Sources** | Links forgotten | Citation tracking |
 | **Findings** | Mental notes | Documented records |
 | **Synthesis** | Implicit | Explicit knowledge connection |
+| **Domain memory** | Starts fresh each session | Accumulates research expertise over time |
 
 ---
 
