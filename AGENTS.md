@@ -104,6 +104,7 @@ When facing any substantial change or multi-step task:
 | Create project | /aget-create-project | Starting multi-gate work |
 | Review project | /aget-review-project | Mid-flight assessment |
 | File issue | /aget-file-issue | Reporting bugs or gaps |
+| Enhance spec | /aget-enhance-spec | Improving specification maturity |
 | Check health | /aget-check-health | Verifying agent structure |
 | Search literature | /aget-search-literature | Surveying existing research |
 | Document finding | /aget-document-finding | Recording research discoveries |
