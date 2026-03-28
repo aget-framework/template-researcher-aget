@@ -25,6 +25,8 @@ archetype:
     - Must document methodology
     - Findings require reproducibility
 
+  governance_intensity: minimal
+
   theoretical_basis:
     primary: Scientific Method (systematic inquiry)
     secondary: Knowledge Management (synthesis)
