@@ -7,3 +7,6 @@
 .claude/todos/
 .claude/chat/
 # .claude/skills/ IS versioned
+__pycache__/
+*.pyc
+sessions/
