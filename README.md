@@ -2,7 +2,7 @@
 
 > Synthesize knowledge through literature search and documented findings
 
-**Version**: v3.31.0 | **Archetype**: Researcher | **Skills**: 2 specialized + 15 universal
+**Version**: v3.31.1 | **Archetype**: Researcher | **Skills**: 2 specialized + 15 universal
 
 ---
 

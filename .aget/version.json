@@ -1,8 +1,8 @@
 {
-  "aget_version": "3.31.0",
+  "aget_version": "3.31.1",
   "manifest_version": "3.0",
   "created": "2025-12-27",
-  "updated": "2026-08-15",
+  "updated": "2026-08-18",
   "template": "researcher",
   "agent_name": "template-researcher-aget",
   "instance_type": "template",
@@ -63,6 +63,7 @@
     "v3.27.0 -> v3.28.0: 2026-07-26",
     "v3.28.0 -> v3.29.0: 2026-08-01",
     "v3.29.0 -> v3.30.0: 2026-08-08",
-    "v3.30.0 -> v3.31.0: 2026-08-15"
+    "v3.30.0 -> v3.31.0: 2026-08-15",
+    "v3.31.0 -> v3.31.1: 2026-08-18 (version coherence; receiver-safe close-gate patch remains core-only)"
   ]
 }
