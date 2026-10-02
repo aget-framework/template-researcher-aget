@@ -15,7 +15,7 @@ Works with Claude Code, Codex CLI, Gemini CLI, and other CLI coding agents.
 This template creates researcher agents focused on systematic investigation, knowledge discovery, and literature synthesis.
 
 ## Project Context
-template-researcher-aget - Researcher AGET template - v3.13.0
+template-researcher-aget - Researcher AGET template - v3.36.0
 
 **Note**: Update this section when instantiating template:
 - Change project name to your researcher agent name

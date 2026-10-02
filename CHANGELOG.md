@@ -9,6 +9,10 @@
 - `scripts/study_topic.py` no longer reports a novel topic when the score floor suppressed its hits. The zero-result branch now says that no artifact is above the score floor and that this is not a novel-topic verdict.
 
 ### Changed
+- A compiled test file, `tests/__pycache__/test_contract.cpython-314-pytest-9.0.2.pyc`, tracked by mistake since 2026-03-28 and carrying the maintainer's local path, is no longer in the repository.
+- The 2026-04-12 migration record under `.aget/evolution/` no longer carries the maintainer's local home path: the backup path it records now starts with `~`.
+- `manifest.yaml` `template.version` now reads 3.36.0. It had stayed at 3.4.0 since January 2026 while the other version fields moved.
+- The project-context line in `AGENTS.md` now ends `v3.36.0`. It had stayed at `v3.13.0`.
 - Advanced the template's framework identity and migration history to v3.36.0. The release's migration kit ships in the core framework repository, not in this template; this template receives no kit payload.
 - Not in this release: the repaired `scripts/close_authorization_guard.py`. This template still ships the guard at its 3.34.0 version; the repair is deferred to the next release. See `handoffs/CORRECTIONS_v3.35.0.md` rows 4 and 5 in `aget-framework/aget` for what to do until then.
 
