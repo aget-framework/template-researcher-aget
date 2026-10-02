@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.36.0] - 2026-10-03 - "Fleet migration kit for supervisors"
+
+### Added
+- `LICENSE`: the Apache 2.0 license text the README declares.
+
+### Fixed
+- `scripts/study_topic.py` no longer reports a novel topic when the score floor suppressed its hits. The zero-result branch now says that no artifact is above the score floor and that this is not a novel-topic verdict.
+
+### Changed
+- Advanced the template's framework identity and migration history to v3.36.0. The release's migration kit ships in the core framework repository, not in this template; this template receives no kit payload.
+- Not in this release: the repaired `scripts/close_authorization_guard.py`. This template still ships the guard at its 3.34.0 version; the repair is deferred to the next release. See `handoffs/CORRECTIONS_v3.35.0.md` rows 4 and 5 in `aget-framework/aget` for what to do until then.
+
 ## [3.35.1] - 2026-10-04 - "Weekly train"
 
 ### Fixed
