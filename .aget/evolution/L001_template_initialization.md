@@ -1,7 +1,7 @@
 # L001: Template Initialization
 
 **Date**: 2026-01-11
-**Context**: Template exemplar program (PROJECT_PLAN_template_v3.3_exemplar_v1.0)
+**Context**: Template exemplar program (prior internal authoring plan)
 **Status**: ACTIVE
 
 ---
